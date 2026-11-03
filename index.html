@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة حسابات الطلاب | مدارس الرواد الأهلية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+
+    <header class="main-header no-print">
+        <div class="header-banner">
+            <div class="logo-group">
+                <img src="rowad.png" alt="شعار مدارس الرواد" class="logo">
+            </div>
+            
+            <div class="header-titles">
+                <h1 id="school">مجمع مدارس الرواد الأهلية</h1>
+                <h2 id="branch">فرع قرطبة</h2>
+                <h3 id="section">القسم الابتدائي بنين</h3>
+            </div>
+
+            <div class="logo-group left-group">
+                <img src="ataa.png" alt="شعار عطاء التعليمية" class="logo">
+                <a href="admin.html" class="admin-btn" title="لوحة تحكم النظام">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    الإدارة
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="login" class="login-section no-print">
+            <div class="login-card glass-card">
+                <form id="f">
+                    <div class="input-group">
+                        <div class="input-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </div>
+                        <input type="tel" id="u" inputmode="numeric" placeholder="اسم المستخدم (آخر 5 أرقام من الهوية)" required autocomplete="off" maxlength="5">
+                    </div>
+                    
+                    <div class="input-group">
+                        <div class="input-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        </div>
+                        <div class="password-wrapper">
+                            <input type="password" id="p" inputmode="numeric" placeholder="كلمة المرور (رقم الجوال)" required autocomplete="off">
+                            <button type="button" id="eye" class="icon-btn" aria-label="إظهار كلمة المرور">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div id="err" class="error-msg" style="display: none;"></div>
+                    
+                    <button type="submit" class="btn-primary">تسجيل الدخول</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="view" style="display: none;">
+            <div class="student-header glass-card no-print">
+                <h2 id="who">جاري جلب البيانات...</h2>
+            </div>
+            <div id="cards" class="cards-grid"></div>
+            <div class="actions-bar no-print">
+                <button id="prt" class="btn-secondary">طباعة الحسابات</button>
+                <button id="out" class="btn-danger">تسجيل الخروج</button>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="no-print">
+        <p>تصميم وبرمجة الأستاذ/ بهجت محمود - معلم المهارات الرقمية</p>
+    </footer>
+
+    <script src="common.js"></script>
+    <script src="student.js"></script>
+</body>
+</html>
